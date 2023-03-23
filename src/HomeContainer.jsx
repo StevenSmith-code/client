@@ -20,6 +20,10 @@ function HomeContainer() {
     />
   ));
 
-  return <div className="grid grid-cols-3">{render}</div>;
+  return (
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 bg-gray-800 h-screen">
+      {render}
+    </div>
+  );
 }
 export default HomeContainer;
