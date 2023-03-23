@@ -11,6 +11,7 @@ function HomeContainer() {
 
   const render = data.map((article) => (
     <ArticleCard
+      key={article.id}
       id={article.id}
       author={article.author}
       title={article.title}

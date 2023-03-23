@@ -11,7 +11,7 @@ function ArticleContainer() {
     fetch(`http://localhost:9292/articles/${id}`)
       .then((res) => res.json())
       .then((data) => setArticle(data));
-  });
+  }, []);
 
   return (
     <div className="flex flex-col bg-gray-800 h-screen">
