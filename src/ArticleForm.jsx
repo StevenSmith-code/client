@@ -25,14 +25,14 @@ function ArticleForm() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        // navigate("/");
+        navigate("/");
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   }
   return (
-    <div className="bg-gray-800 h-screen">
+    <div className="bg-gray-800 h-[calc(100vh-88px)]">
       <div className="bg-gray-500 max-w-5xl m-auto rounded-lg -mt-2 flex flex-col items-center pb-10">
         <Box
           component="form"
@@ -72,7 +72,7 @@ function ArticleForm() {
               sx={{ m: 1, width: "75ch" }}
               label="Write your blog here"
               multiline
-              rows={40}
+              rows={35}
               value={submittedData.body}
               onChange={(e) =>
                 setSubmittedData({ ...submittedData, body: e.target.value })

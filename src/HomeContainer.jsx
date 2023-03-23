@@ -18,11 +18,13 @@ function HomeContainer() {
       body={article.body}
       created_at={article.created_at}
       updated_at={article.updated_at}
+      setData={setData}
+      data={data}
     />
   ));
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 bg-gray-800 h-screen">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 bg-gray-800 h-[calc(100vh-96px)]">
       {render}
     </div>
   );
