@@ -7,7 +7,6 @@ function Navbar() {
       <Link className="ml-10" to="/">
         Home
       </Link>
-      <Link to="/your_blogs">Your blogs</Link>
       <Link to="/create_blog">Make a blog</Link>
     </div>
   );
