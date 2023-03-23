@@ -1,11 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function ArticleCard({ id, author, title, body, created_at, updated_at }) {
   const date = new Date(created_at);
   const formattedDate = date.toLocaleDateString("en-US");
+  const navigate = useNavigate();
 
   return (
-    <div className="h-52 w-72 bg-slate-300 mb-5 mt-10 m-auto px-2 py-3 content-between rounded-xl">
+    <div
+      onClick={() => navigate(`/articles/${id}`)}
+      className="h-52 w-72 bg-slate-300 mb-5 mt-10 m-auto px-2 py-3 content-between rounded-xl cursor-pointer"
+    >
       <h1 className="text-center mb-5 lg:text-2xl">{title}</h1>
       <p className="line-clamp-3 mb-8">{body}</p>
       <div className="text-sm flex justify-around">
