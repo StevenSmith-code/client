@@ -12,14 +12,24 @@ function CommentContainer() {
       .then((res) => res.json())
       .then((data) => setComments(data));
   }, []);
+
+  const renderComments = comments?.map((comment) => (
+    <Comment
+      key={comment.id}
+      user={comment.user}
+      comment={comment.comment}
+      created_at={comment.created_at}
+    />
+  ));
+
   return (
-    <div className="flex flex-col bg-gray-800 h-96 max-h-96">
+    <div className="flex flex-col bg-gray-800 ">
       <div className="max-w-7xl w-[80rem] m-auto space-y-4 z-10 bg-gray-500 text-white h-[calc(100vh-96px)]">
         <h1 className="text-center lg:text-2xl font-bold mt-5">Comments:</h1>
 
-        <div className="flex flex-col items-center space-y-5">
-          <Comment comments={comments} />
-          <CreateComment />
+        <div className="flex flex-col items-center space-y-10">
+          {renderComments}
+          <CreateComment id={id} />
         </div>
       </div>
     </div>
