@@ -38,9 +38,11 @@ function ArticleContainer() {
   }
 
   return (
-    <div className="flex flex-col bg-gray-800 h-screen">
-      <div className="max-w-7xl m-auto space-y-4 z-10 bg-gray-500 text-white h-screen">
-        <h1 className="text-center lg:text-4xl mt-10">{article.title}</h1>
+    <div className="flex flex-col bg-gray-800 h-[calc(100vh-96px)]">
+      <div className="max-w-7xl m-auto space-y-4 z-10 bg-gray-500 border border-black text-white h-[calc(100vh-96px)] overflow-y-scroll">
+        <h1 className="text-center lg:text-4xl font-bold mt-10">
+          {article.title}
+        </h1>
         <h2 className="text-center lg:text-xl">Made by: {article.author}</h2>
         <div className="flex justify-center">
           <h2 className="text-center mr-5">Last Updated: {formattedDate}</h2>
