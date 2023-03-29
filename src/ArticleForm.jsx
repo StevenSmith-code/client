@@ -41,8 +41,8 @@ function ArticleForm() {
           noValidate
           autoComplete="off"
         >
-          <h1 className="text-center lg:text-3xl max-w-5xl mb-10 mt-10">
-            Write a blog post!
+          <h1 className="text-center text-white font-semibold lg:text-3xl max-w-5xl mb-10 mt-10">
+            Post your Blog!
           </h1>
 
           <div className="flex justify-between px-2 mb-10">

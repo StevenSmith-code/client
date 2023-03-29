@@ -29,7 +29,11 @@ function CommentContainer() {
 
         <div className="flex flex-col items-center space-y-10">
           {renderComments}
-          <CreateComment id={id} />
+          <CreateComment
+            id={id}
+            comments={comments}
+            setComments={setComments}
+          />
         </div>
       </div>
     </div>

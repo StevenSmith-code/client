@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-function CreateComment({ id }) {
+function CreateComment({ id, setComments, comments }) {
   const [comment, setComment] = useState({
     user: "",
     comment: "",
@@ -18,12 +18,13 @@ function CreateComment({ id }) {
       body: JSON.stringify(comment),
     })
       .then((res) => res.json())
-      .then((data) =>
+      .then((data) => {
+        setComments([...comments, data]);
         setComment({
           user: "",
           comment: "",
-        })
-      );
+        });
+      });
   }
 
   return (
